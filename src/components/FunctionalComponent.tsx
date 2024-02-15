@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Button, Spinner, Alert } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 interface FunctionalComponentProps {
   subTitle: string
@@ -43,6 +44,9 @@ const FunctionalComponent = ({ subTitle, color }: FunctionalComponentProps) => {
       </Button>
       {movieObject && <Alert variant="success">{movieObject.title}</Alert>}
       {/* questo elemento diventa visibile quando movieObject !== null */}
+      <Link to="/class">
+        <h4>VAI ALLE CLASSI</h4>
+      </Link>
     </div>
   )
 }
